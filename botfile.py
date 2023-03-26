@@ -40,7 +40,7 @@ from discord.ext.commands import has_permissions, MissingPermissions
 import json
 import asyncio
 client = discord.Client()
-#guild = 1025086724105318471
+#guild = your_guild_id
 intents = discord.Intents.default()
 intents.members = True
 client = commands.Bot(command_prefix = "$", intents = intents)
@@ -51,5 +51,8 @@ from discord.ext import tasks, commands
 async def get_help(ctx):
   await ctx.respond("Hi!)
                     
+@bot.event()
+async def on_start():
+  print("von Faelixyz erstellt!")
 #NICHT EDITIEREN!
 bot.run(BotToken)
